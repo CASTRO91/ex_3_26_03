@@ -14,17 +14,17 @@ class Alphabet:
 
 
 class EngAlphabet(Alphabet):
-
+    __letters_num = len(string.ascii_uppercase)
     def __init__(self, lang="Eng", letters=string.ascii_uppercase):
         super().__init__(lang, letters)
-        self._letters_num = len(string.ascii_uppercase)
+
 
     def is_en_letters(self, letters):
         self.letters = letters
         return True if self.letters in string.ascii_letters else False
 
     def letters_num(self):
-        return self._letters_num
+        return self.__letters_num
 
     @staticmethod
     def example():
